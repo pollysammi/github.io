@@ -95,8 +95,10 @@ description: >
 
 ## 18:30 알림
 
-- Google Calendar 반복 이벤트 "18:30 研究日记：今日目标完成情况 + 实际用时" (primary, Asia/Seoul, 매일, 팝업 0분). event id `gs5c8edoduflrpk0g2bui7u8po`.
-- 시간대·요일 변경 요청 시 이 이벤트 수정. 새로 만들지 말 것 (중복 방지).
+- Claude 앱 휴대폰 푸시 알림. 예약 작업 "研究日记 18:30 알림" (trigger id `trig_01LR4GoVjJSfP9fHTW8rakQ4`), cron `CRON_TZ=Asia/Seoul 30 18 * * *`, 매 실행 새 세션, push 켬.
+- 문구: "18:30 研究日记：今日目标完成情况 + 实际用时". 커넥터 없음 (Notion 조회 안 함).
+- 시간대·요일 변경 요청 시 `update_trigger`로 이 작업 수정. 새로 만들지 말 것 (중복 방지).
+- Google Calendar 알림은 쓰지 않음 (사용자 요청: Claude 앱 알림).
 
 ## 시간 추정 보정
 
